@@ -29,8 +29,8 @@ public class Game {
     }
     
     public void playGame() {
-        ArrayList <Goal> eventList = new ArrayList();
-        Goal currEvent;
+        ArrayList <GameEvent> eventList = new ArrayList();
+        GameEvent currEvent;
         for (int i = 1; i <=90; i++){
             
             if (Math.random() > 0.95){
@@ -58,7 +58,7 @@ public class Game {
         this.getAwayTeam().getTeamName() + "\n" + 
                "Date: " + this.getTheDateTime().format(DateTimeFormatter.ISO_LOCAL_DATE) + "\n");
          
-        for (Goal currGoal: this.getGoals()) {
+        for (GameEvent currGoal: this.getGoals()) {
             
             if (currGoal.getTheTeam()== homeTeam) {
                 homeTeamGoals++;
@@ -69,7 +69,7 @@ public class Game {
             }
             
             /* Practice 12-2. Modify the text printed */
-            returnString.append("Goal scored after "
+            returnString.append("GameEvent scored after "
             + currGoal.getTheTime() + " mins by "
             + currGoal.getThePlayer().getPlayerName() + " of "
             + currGoal.getTheTeam().getTeamName() +

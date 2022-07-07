@@ -6,7 +6,9 @@
 
 package soccer;
 
-import utility.GameUtils;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import utility.*;
 
 /**
  *
@@ -19,11 +21,13 @@ public class Game {
     private Goal[] goals;
     
     /* Practice 11-2. Add LocalDateTime attribute here */
+    private LocalDateTime theDateTime;
     
     /* Practice 11-2. Modify the constructor to include the date and time of the game */
-    public Game(Team homeTeam, Team awayTeam) {
+    public Game(Team homeTeam, Team awayTeam, LocalDateTime theDateTime) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
+        this.theDateTime = theDateTime;
     }
     
     public void playGame(int maxGoals) {       
@@ -45,7 +49,8 @@ public class Game {
         
         /* Practice 11-2. Modify the next line to include the date and time of the game */
         returnString.append(this.getHomeTeam().getTeamName() + " vs. " +
-        this.getAwayTeam().getTeamName() + "\n");
+        this.getAwayTeam().getTeamName() + "\n" + "Date " + 
+                this.theDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE) + "\n");
          
         for (Goal currGoal: this.getGoals()) {
             
@@ -120,6 +125,20 @@ public class Game {
      */
     public void setGoals(Goal[] goals) {
         this.goals = goals;
+    }
+
+    /**
+     * @return the theDateTime
+     */
+    public LocalDateTime getTheDateTime() {
+        return theDateTime;
+    }
+
+    /**
+     * @param theDateTime the theDateTime to set
+     */
+    public void setTheDateTime(LocalDateTime theDateTime) {
+        this.theDateTime = theDateTime;
     }
       
 }
