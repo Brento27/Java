@@ -19,7 +19,6 @@ public class DiceApp {
             roll = randomInt(1, 6); //→10
             System.out.println(roll + " "); //→11
         }
-        System.out.println();
     }
 
     public static int randomInt(int low, int high) //→16
