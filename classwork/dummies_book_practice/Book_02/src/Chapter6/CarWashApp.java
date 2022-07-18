@@ -8,7 +8,7 @@ package Chapter6;
  *
  * @author Brent
  */
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class CarWashApp {
 
