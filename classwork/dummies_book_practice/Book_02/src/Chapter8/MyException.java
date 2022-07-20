@@ -12,7 +12,8 @@ public class MyException {
 
     public static void main(String[] args) {
         try {
-            doSomething(true);
+            doSomething(false);
+            System.out.println("No exception");
         } catch (Exception e) {
             System.out.println("Exception!");
         }

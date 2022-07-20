@@ -21,6 +21,8 @@ public class GuessingGameMethod3 {
         } while (askForAnotherRound("Try again?"));
         System.out.println("\nThank you for playing!");
     }
+    
+    
 
     public static void playARound(int min, int max) {
         boolean validInput;
