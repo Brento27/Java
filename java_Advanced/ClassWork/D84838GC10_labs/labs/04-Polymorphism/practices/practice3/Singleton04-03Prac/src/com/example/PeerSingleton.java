@@ -3,6 +3,7 @@ package com.example;
 public final class PeerSingleton {
 
     private static final String[] hostNames = new String[5];
+    private static final PeerSingleton instance = new PeerSingleton();
 
     static {
         // Read from File
@@ -13,10 +14,15 @@ public final class PeerSingleton {
         hostNames[4] = "192.168.2.14";
     }
 
-    public PeerSingleton() {
+    private PeerSingleton() {
+        
     }
 
     public String[] getHostNames() {
         return hostNames;
+    }
+    
+    public static PeerSingleton getInstance(){
+        return instance;
     }
 }
