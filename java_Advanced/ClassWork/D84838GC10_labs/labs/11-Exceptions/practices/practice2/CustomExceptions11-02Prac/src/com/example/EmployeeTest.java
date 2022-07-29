@@ -2,7 +2,8 @@ package com.example;
 
 public class EmployeeTest {
     
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws
+InvalidOperationException  {
         Employee e1 = new Employee(0, "bob", "builder", 1250.50f);
         EmployeeImpl emp = new EmployeeImpl();
         emp.add(e1);
