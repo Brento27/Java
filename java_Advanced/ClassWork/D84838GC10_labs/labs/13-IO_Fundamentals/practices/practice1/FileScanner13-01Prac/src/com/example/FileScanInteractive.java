@@ -8,9 +8,13 @@ import java.util.Scanner;
 
 public class FileScanInteractive {
 
+    // Count the number of occurences if the string Search in the String file name
     public int countTokens(String file, String search) throws IOException {
         int instanceCount = 0;
-        try ( FileReader fr = new FileReader(file);  BufferedReader br = new BufferedReader(fr);  Scanner s = new Scanner(br)) {
+        // Chain a FileReader to a BufferedReader to a Scanner
+        try (FileReader fr = new FileReader(file);
+                BufferedReader br = new BufferedReader(fr);
+                Scanner s = new Scanner(br)) {
             s.useDelimiter("\\W");
             while (s.hasNext()) {
                 if (search.equalsIgnoreCase(s.next().trim())) {
@@ -21,17 +25,23 @@ public class FileScanInteractive {
         return instanceCount;
     }
 
+    // Main method
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Usage: java FileScanInteractive <file to search>");
+            System.out.println("Usage: java ScanFileInteractive <file to search>");
             System.exit(-1);
         }
-
+        // Save the file name as a string
         String file = args[0];
+
+        // Create an instance of the ScanFileInteractive class
         FileScanInteractive scan = new FileScanInteractive();
 
-        try ( BufferedReader in
-                = new BufferedReader(new InputStreamReader(System.in))) {
+        // Wrap the System.in InputStream with a BufferedReader to read
+        // each line from the keyboard.
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
+            // Wrap the System.in InputStream with a BufferedReader to read
+            // each line from the keyboard.
             String search = "";
             System.out.println("Searching through the file: " + file);
             while (true) {
@@ -44,8 +54,8 @@ public class FileScanInteractive {
                 System.out.println("The word \"" + search + "\" appears "
                         + count + " times in the file.");
             }
-        } catch (IOException e) {
-            System.out.println("Ece[tion: " + e);
+        } catch (IOException e) { // Catch any IO exceptions.
+            System.out.println("Exception: " + e);
             System.exit(-1);
         }
     }
