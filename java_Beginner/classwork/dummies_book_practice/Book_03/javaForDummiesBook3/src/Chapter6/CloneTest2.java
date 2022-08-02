@@ -140,3 +140,28 @@ class Address implements Cloneable //→109
                 + this.zipCode;
     }
 }
+
+/*→5 Creates an employee named Anthony Martinez.
+→8 Sets the employee’s address.
+→11 Clones the employee (okay, just the object, not the co-worker).
+→13 Prints the two Employee objects after cloning. They should have
+identical data.
+→18 Changes the second employee’s name.
+→19 Changes the second employee’s address.
+→23 Prints the two Employee objects after changing the data for the second
+employee. The objects should now have different data.
+→30 A utility method that prints the data for an Employee object.
+→40 The Employee class. Notice that this class implements Cloneable.
+→46 The address field, which holds an object of type Address.
+→85 The clone method in the Employee class.
+→90 Creates a shallow copy of the Employee object.
+→91 Creates a shallow copy of the Address object and assigns it to the
+address field of the cloned Employee object.
+→93 Catches CloneNotSupportedException, which won’t ever happen
+because the class implements Cloneable. The compiler requires the
+try/catch statement here because CloneNotSupportedException is
+a checked exception.
+→97 Returns the cloned Employee object.
+→109 The Address class, which also implements Cloneable.
+→133 The clone method of the Address class.
+→137 Returns a shallow copy of the Address object.*/
