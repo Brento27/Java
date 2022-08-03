@@ -9,5 +9,5 @@ package Chapter4;
  * @author Brent
  */
 public class subClass extends superClas{
-    
+
 }
