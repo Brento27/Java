@@ -31,7 +31,7 @@ class CountTest //→21
 
     private static int instanceCount = 0; //→23
 
-    public CountTest() //→25
+    CountTest() //→25
     {
         instanceCount++;
     }

@@ -9,4 +9,3 @@ package Chapter4;
  * @author Brent
  */
 public class superClas {}
-

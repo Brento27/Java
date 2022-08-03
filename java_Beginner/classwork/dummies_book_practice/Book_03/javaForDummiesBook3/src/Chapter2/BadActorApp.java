@@ -11,7 +11,7 @@ package Chapter2;
 public class BadActorApp {
 
     public static void main(String[] args) {
-        //Actor a = new Actor(); // error: won't compile
+        // Actor a = new Actor(); // error: won't compile
     }
 }
 

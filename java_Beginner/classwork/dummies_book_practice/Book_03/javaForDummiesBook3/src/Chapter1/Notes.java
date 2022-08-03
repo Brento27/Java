@@ -37,19 +37,24 @@ public class Notes {
                 + "class as the basis for another. The existing class is called the base class, superclass,\n"
                 + "or parent class; the new class that’s derived from it is called the derived class, subclass,\n"
                 + "or child class.\n");
+        System.out.println("");
         System.out.println("An interface is a set of methods and fields that a class must provide to implement\n"
                 + "the interface. The interface itself is simply a set of public method and field declarations\n"
                 + "that are given a name.\n");
+        System.out.println("");
         System.out.println("An object-oriented program usually isn’t just a single object. Instead, it’s a group\n"
                 + "of objects that work together to get a job done. The most important part of developing\n"
                 + "an object-oriented program is designing the classes that are used to create\n"
                 + "the program’s objects. The basic idea is to break a large problem into a set of\n"
                 + "classes, each of which is manageable in size and complexity.\n");
+        System.out.println("");
         System.out.println("Diagrams\n");
+        System.out.println("");
         System.out.println("The basic element in a class diagram is a class. In UML, each class is drawn as a\n"
                 + "rectangle. At minimum, the rectangle must include the class name.\n+ Public\n"
                 + "– Private\n"
                 + "# Protected");
+        System.out.println("");
         System.out.println("A solid line with a hollow closed arrow at one end represents inheritance:\n"
                 + "The arrow points to the base class. A dashed line with a hollow closed arrow at one\n"
                 + "end indicates that a class implements an interface:\n"
