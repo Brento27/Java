@@ -1,4 +1,3 @@
-package com.lowewriter.payroll;
 
 /**
  * Represents an employee.
@@ -8,7 +7,7 @@ package com.lowewriter.payroll;
  * @version 1.5
  * @since 1.0
  */
-public class Employee {
+public class Employee1 {
 
     private String lastName;
     private String firstName;
@@ -24,7 +23,7 @@ public class Employee {
      * @param lastName The employee's last name.
      * @param firstName The employee's first name.
      */
-    public Employee(String lastName, String firstName) {
+    public Employee1(String lastName, String firstName) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.address = new Address();
