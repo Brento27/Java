@@ -1,12 +1,13 @@
-package com.example.helloworldfx;
+package com.example.chapter1;
 
 import javafx.application.*;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
-public class ClickMe extends Application
-{
+
+public class page568ExtendingApplication extends Application {
+
     public static void main(String[] args)
     {
         launch(args);
@@ -18,10 +19,11 @@ public class ClickMe extends Application
         btn = new Button();
         btn.setText("Click me please!");
         btn.setOnAction(e -> buttonClick());
+        btn.setOnAction(e -> buttonClick());
 // Add the button to a layout pane
         BorderPane pane = new BorderPane();
         pane.setCenter(btn);
-// Add the layout pane to a scene
+        // Add the layout pane to a scene
         Scene scene = new Scene(pane, 300, 250);
 // Finalize and show the stage
         primaryStage.setScene(scene);
@@ -30,7 +32,7 @@ public class ClickMe extends Application
     }
     public void buttonClick()
     {
-        if (btn.getText() == "Click me please!")
+        if (btn.getText().equals("Click me please!"))
         {
             btn.setText("You clicked me!");
         }

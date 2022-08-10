@@ -1,4 +1,4 @@
-package com.example.helloworldfx;
+package com.example.chapter1;
 
 import javafx.application.*; //→1
 import javafx.stage.*;
