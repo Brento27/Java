@@ -86,7 +86,7 @@ Here, a Lambda expression is used to simply call the buttonClick
 method whenever the user clicks the button.
 →26 The constructor of the Label class is called to create a new label.
 →27 The label’s setText method is called to set the initial text value of the
-label to You have not clicked the button..
+label to You have not clicked the button.
 →30 A border pane object is created by calling the constructor of the
 BorderPane class, referencing the border pane via a variable named
 pane. The border pane will be used to control the layout of the controls
@@ -112,7 +112,7 @@ clicked the button.
 →47 An if statement is used to determine whether the button has been
 clicked one or more times.
 →49 If the button has been clicked once, the label text is set to You have
-clicked once..
+clicked once.
 →53 Otherwise, the label text is set to a string that indicates how many times
 the button has been clicked.
          */
