@@ -13,4 +13,6 @@ module com.example.helloworldfx {
     exports com.example.chapter4;
     opens com.example.chapter5 to javafx.fxml;
     exports com.example.chapter5;
+    opens com.example.chapter6 to javafx.fxml;
+    exports com.example.chapter6;
 }
