@@ -11,12 +11,12 @@ package page535_Sorting;
 public class QuickSortApp {
 
     public static void main(String[] args) {
-        int LEN = 100;
+        int LEN = 10;
         int[] unsorted = new int[LEN];
         for (int i = 0; i < LEN; i++) //→7
         {
             unsorted[i]
-                    = (int) (Math.random() * 100) + 1;
+                    = (int) (Math.random() * 10) + 1;
         }
         System.out.println("Unsorted array:");
         printArray(unsorted); //→10
