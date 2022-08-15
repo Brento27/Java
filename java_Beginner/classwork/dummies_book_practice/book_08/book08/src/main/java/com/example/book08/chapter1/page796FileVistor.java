@@ -1,4 +1,4 @@
-package com.example.book08;
+package com.example.book08.chapter1;
 
 import java.nio.file.*;
 import java.io.*;
