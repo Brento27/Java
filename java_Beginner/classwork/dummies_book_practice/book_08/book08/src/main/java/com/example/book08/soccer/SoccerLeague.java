@@ -6,9 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SoccerLeague {
-
+    static HashMap<String, Integer> scoreBoard = new HashMap<>();
     public static void main(String[] args) {
-        HashMap<String, Integer> scoreBoard = new HashMap<>();
+
+        Integer position = 0;
 
         BufferedReader in = getReader("Soccer.txt");
         String succes = checkGames(in, scoreBoard);
@@ -44,8 +45,8 @@ public class SoccerLeague {
     private static String checkGames(BufferedReader in, HashMap<String, Integer> scoreBoard) {
         String line;
         String[] game;
-        String[] x;
-        String[] y;
+        String[] team1score1;
+        String[] team2score2;
         String team1;
         int score1;
         String team2;
@@ -57,16 +58,16 @@ public class SoccerLeague {
             throw new RuntimeException(e);
         }
 
-        if (line == null)
+        if (line == null || line.equals(""))
             return null;
         else {
             game = line.split(",");
-            x = game[0].split(" ");
-            y = game[1].trim().split(" ");
-            team1 = x[0];
-            score1 = Integer.parseInt(x[1]);
-            team2 = y[0];
-            score2 = Integer.parseInt(y[1]);
+            team1score1 = game[0].split(" ");
+            team2score2 = game[1].trim().split(" ");
+            team1 = team1score1[0];
+            score1 = Integer.parseInt(team1score1[1]);
+            team2 = team2score2[0];
+            score2 = Integer.parseInt(team2score2[1]);
 
 
             if (score1 > score2) {
@@ -107,6 +108,5 @@ public class SoccerLeague {
             }
             return "Succesfull ReadLine";
         }
-
     }
 }
