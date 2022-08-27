@@ -9,7 +9,7 @@ public class SoccerLeague {
     static HashMap<String, Integer> scoreBoard = new HashMap<>();
     public static void main(String[] args) {
 
-        Integer position = 0;
+        // Integer position = 0;
 
         BufferedReader in = getReader("Soccer.txt");
         String succes = checkGames(in, scoreBoard);
@@ -19,7 +19,7 @@ public class SoccerLeague {
 
         System.out.println("\nThats the end of the league");
 
-        System.out.println("\n" + scoreBoard.toString());
+        // System.out.println("\n" + scoreBoard.toString());
 
         scoreBoard.entrySet().stream()
                 .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
