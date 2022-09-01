@@ -7,12 +7,12 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-public class page609SceneSwitcher extends Application
-{
-    public static void main(String[] args)
-    {
+
+public class page609SceneSwitcher extends Application {
+    public static void main(String[] args) {
         launch(args);
     }
+
     // class fields for Click-Counter scene →15
     int iClickCount = 0;
     Label lblClicks;
@@ -28,8 +28,9 @@ public class page609SceneSwitcher extends Application
     Scene scene2;
     // class field for stage
     Stage stage; //→31
-    @Override public void start(Stage primaryStage)
-    {
+
+    @Override
+    public void start(Stage primaryStage) {
         stage = primaryStage; //→35
 // Build the Click-Counter scene →37
         lblClicks = new Label();
@@ -37,11 +38,11 @@ public class page609SceneSwitcher extends Application
         btnClickMe = new Button();
         btnClickMe.setText("Click me please!");
         btnClickMe.setOnAction(
-                e -> btnClickMe_Click() );
+                e -> btnClickMe_Click());
         btnSwitchToScene2 = new Button();
         btnSwitchToScene2.setText("Switch!");
         btnSwitchToScene2.setOnAction(
-                e -> btnSwitchToScene2_Click() );
+                e -> btnSwitchToScene2_Click());
         VBox pane1 = new VBox(10);
         pane1.getChildren().addAll(lblClicks, btnClickMe,
                 btnSwitchToScene2);
@@ -52,15 +53,15 @@ public class page609SceneSwitcher extends Application
         btnAdd = new Button();
         btnAdd.setText("Add");
         btnAdd.setOnAction(
-                e -> btnAdd_Click() );
+                e -> btnAdd_Click());
         btnSubtract = new Button();
         btnSubtract.setText("Subtract");
         btnSubtract.setOnAction(
-                e -> btnSubtract_Click() );
+                e -> btnSubtract_Click());
         btnSwitchToScene2 = new Button();
         btnSwitchToScene2.setText("Switch!");
         btnSwitchToScene2.setOnAction(
-                e -> btnSwitchToScene1_Click() );
+                e -> btnSwitchToScene1_Click());
         HBox pane2 = new HBox(10);
         pane2.getChildren().addAll(lblCounter, btnAdd,
                 btnSubtract, btnSwitchToScene2);
@@ -70,37 +71,34 @@ public class page609SceneSwitcher extends Application
         primaryStage.setTitle("Scene Switcher");
         primaryStage.show();
     }
+
     // Event handlers for scene 1 →91
-    public void btnClickMe_Click()
-    {
+    public void btnClickMe_Click() {
         iClickCount++;
-        if (iClickCount == 1)
-        {
+        if (iClickCount == 1) {
             lblClicks.setText("You have clicked once.");
-        }
-        else
-        {
+        } else {
             lblClicks.setText("You have clicked "
-                    + iClickCount + " times." );
+                    + iClickCount + " times.");
         }
     }
-    private void btnSwitchToScene2_Click()
-    {
+
+    private void btnSwitchToScene2_Click() {
         stage.setScene(scene2);
     }
+
     // Event handlers for scene 2 →112
-    private void btnAdd_Click()
-    {
+    private void btnAdd_Click() {
         iCounter++;
         lblCounter.setText(Integer.toString(iCounter));
     }
-    private void btnSubtract_Click()
-    {
+
+    private void btnSubtract_Click() {
         iCounter--;
         lblCounter.setText(Integer.toString(iCounter));
     }
-    private void btnSwitchToScene1_Click()
-    {
+
+    private void btnSwitchToScene1_Click() {
         stage.setScene(scene1);
     }
 }

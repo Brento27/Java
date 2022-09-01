@@ -72,26 +72,10 @@ public class SoccerLeague {
 
             if (score1 > score2) {
                 System.out.println(team1 + " beats " + team2 + " " + score1 + ":" + score2);
-                if (scoreBoard.containsKey(team1)) {
-                    scoreBoard.put(team1, scoreBoard.get(team1) + 3);
-                } else {
-                    scoreBoard.put(team1, 3);
-                }
-
-                if (!scoreBoard.containsKey(team2)) {
-                    scoreBoard.put(team2, 0);
-                }
+               addToLeague(team1, team2);
             } else if (score1 < score2) {
                 System.out.println(team2 + " beats " + team1 + " " + score2 + ":" + score1);
-                if (scoreBoard.containsKey(team2)) {
-                    scoreBoard.put(team2, scoreBoard.get(team2) + 3);
-                } else {
-                    scoreBoard.put(team2, 3);
-                }
-
-                if (!scoreBoard.containsKey(team1)) {
-                    scoreBoard.put(team1, 0);
-                }
+               addToLeague(team2, team2);
             } else {
                 System.out.println("It's a draw between " + team1 + " and " + team2 + " " + score1 + ":" + score2);
                 if (scoreBoard.containsKey(team1)) {
@@ -107,6 +91,18 @@ public class SoccerLeague {
                 }
             }
             return "Succesfull ReadLine";
+        }
+    }
+
+    static public void addToLeague(String team1, String team2){
+        if (scoreBoard.containsKey(team1)) {
+            scoreBoard.put(team1, scoreBoard.get(team1) + 3);
+        } else {
+            scoreBoard.put(team1, 3);
+        }
+
+        if (!scoreBoard.containsKey(team2)) {
+            scoreBoard.put(team2, 0);
         }
     }
 }
